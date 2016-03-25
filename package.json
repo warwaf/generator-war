@@ -1,5 +1,8 @@
 {
   "name": "generator-war",
+  "version": "0.0.2",
+  "license": "MIT",
+  "author": "war",
   "dependencies": {
     "yeoman-generator": "^0.21.1",
     "chalk": "^1.0.0",

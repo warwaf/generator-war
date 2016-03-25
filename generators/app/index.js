@@ -16,57 +16,9 @@ var war  = yeoman.generators.Base.extend({
     },
     method2: function () {
       console.log('方法2');
-    },
-    prompting: function () {
-      var done = this.async();
-      this.prompt({
-        type    : 'input',
-        name    : 'name',
-        message : 'Your project name',
-        default : this.appname // Default to current folder name
-      }, function (answers) {
-        this.log(answers.name);
-        done();
-      }.bind(this));
     }
 });
 
+require("./src/prompts")(war);
+
 module.exports = war;
-
-
-// module.exports = yeoman.generators.Base.extend({
-//
-//   prompting: function () {
-//     var done = this.async();
-//
-//     // Have Yeoman greet the user.
-//     this.log(yosay(
-//       'Welcome to the ultimate ' + chalk.red('') + ' generator!'
-//     ));
-//
-//     var prompts = [{
-//       type: 'confirm',
-//       name: 'someOption',
-//       message: 'Would you like to enable this option?',
-//       default: true
-//     }];
-//
-//     this.prompt(prompts, function (props) {
-//       this.props = props;
-//       // To access props later use this.props.someOption;
-//
-//       done();
-//     }.bind(this));
-//   },
-//
-//   writing: function () {
-//     this.fs.copy(
-//       this.templatePath('dummyfile.txt'),
-//       this.destinationPath('dummyfile.txt')
-//     );
-//   },
-//
-//   install: function () {
-//     this.installDependencies();
-//   }
-// });

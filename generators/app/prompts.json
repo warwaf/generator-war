@@ -1,0 +1,395 @@
+[
+  {
+    "type": "list",
+    "name": "angularVersion",
+    "message": "请选择你的Angularjs 版本?",
+    "choices": [
+      {
+        "value": "~1.4.8",
+        "name": "1.4.x (stable)"
+      },
+      {
+        "value": "~1.3.20",
+        "name": "1.3.x (legacy)"
+      }
+    ]
+  },
+  {
+    "type": "checkbox",
+    "name": "angularModules",
+    "message": "What Angular modules would you like to have? (ngRoute and ngResource will be addressed after)",
+    "choices": [
+      {
+        "value": {
+          "key": "animate",
+          "module": "ngAnimate"
+        },
+        "name": "angular-animate.js (enable animation features)",
+        "checked": true
+      },
+      {
+        "value": {
+          "key": "cookies",
+          "module": "ngCookies"
+        },
+        "name": "angular-cookies.js (handle cookie management)",
+        "checked": true
+      },
+      {
+        "value": {
+          "key": "touch",
+          "module": "ngTouch"
+        },
+        "name": "angular-touch.js (for mobile development)",
+        "checked": true
+      },
+      {
+        "value": {
+          "key": "sanitize",
+          "module": "ngSanitize"
+        },
+        "name": "angular-sanitize.js (to securely parse and manipulate HTML)",
+        "checked": true
+      },
+      {
+        "value": {
+          "key": "messages",
+          "module": "ngMessages"
+        },
+        "name": "angular-messages.js (enhanced support for displaying messages within templates)",
+        "checked": true
+      },
+      {
+        "value": {
+          "key": "aria",
+          "module": "ngAria"
+        },
+        "name": "angular-aria.js (support for common ARIA attributes)",
+        "checked": true
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "name": "jQuery",
+    "message": "Do you need jQuery or perhaps Zepto?",
+    "choices": [
+      {
+        "value": {
+          "key": "jquery2"
+        },
+        "name": "jQuery 2.x (new version, lighter, IE9+)"
+      },
+      {
+        "value": {
+          "key": "jquery1"
+        },
+        "name": "jQuery 1.x (branch still supporting IE6, 7 and 8)"
+      },
+      {
+        "value": {
+          "key": "zepto"
+        },
+        "name": "ZeptoJS 1.1.x (jQuery compatible but very much lighter)"
+      },
+      {
+        "value": {
+          "key": "jqLite"
+        },
+        "name": "None (Angular will use its own jqLite)"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "name": "resource",
+    "message": "Would you like to use a REST resource library?",
+    "choices": [
+      {
+        "value": {
+          "key": "angular-resource",
+          "module": "ngResource"
+        },
+        "name": "ngResource, the official support for RESTful services"
+      },
+      {
+        "value": {
+          "key": "restangular",
+          "module": "restangular"
+        },
+        "name": "Restangular, an alternative service to handle RESTful requests"
+      },
+      {
+        "value": {
+          "key": "$http",
+          "module": null
+        },
+        "name": "None, $http is enough!"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "name": "router",
+    "message": "Would you like to use a router?",
+    "choices": [
+      {
+        "value": {
+          "key": "ui-router",
+          "module": "ui.router"
+        },
+        "name": "UI Router, flexible routing with nested views"
+      },
+      {
+        "value": {
+          "key": "angular-route",
+          "module": "ngRoute"
+        },
+        "name": "ngRoute, the official router"
+      },
+      {
+        "value": {
+          "key": "new-router",
+          "module": "ngNewRouter"
+        },
+        "name": "Angular 2 new router which is compatible with Angular 1 (experimental)"
+      },
+      {
+        "value": {
+          "key": "noRouter",
+          "module": null
+        },
+        "name": "None"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "name": "ui",
+    "message": "Which UI framework do you want?",
+    "choices": [
+      {
+        "value": {
+          "key": "bootstrap",
+          "module": null
+        },
+        "name": "Bootstrap, the most popular HTML, CSS, and JS framework"
+      },
+      {
+        "value": {
+          "key": "angular-material",
+          "module": "ngMaterial"
+        },
+        "name": "Angular Material, the reference implementation of the Google's Material Design specification"
+      },
+      {
+        "value": {
+          "key": "material-design-lite",
+          "module": null
+        },
+        "name": "Material Design Lite, add a Material Design look and feel to your websites."
+      },
+      {
+        "value": {
+          "key": "foundation",
+          "module": null
+        },
+        "name": "Foundation, \"The most advanced responsive front-end framework in the world\""
+      },
+      {
+        "value": {
+          "key": "noUI",
+          "module": null
+        },
+        "name": "None"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "name": "bootstrapComponents",
+    "message": "How do you want to implement your Bootstrap components?",
+    "choices": [
+      {
+        "value": {
+          "key": "ui-bootstrap",
+          "module": "ui.bootstrap"
+        },
+        "name": "Angular UI Bootstrap, Bootstrap components written in pure AngularJS by the AngularUI Team"
+      },
+      {
+        "value": {
+          "key": "angular-strap",
+          "module": "mgcrea.ngStrap"
+        },
+        "name": "AngularStrap, AngularJS 1.2+ native directives for Bootstrap 3"
+      },
+      {
+        "value": {
+          "key": "official",
+          "module": null
+        },
+        "name": "The official jQuery implementation of Bootstrap"
+      },
+      {
+        "value": {
+          "key": "noBootstrapComponents",
+          "module": null
+        },
+        "name": "No JavaScript, just CSS"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "name": "foundationComponents",
+    "message": "How do you want to implement your Foundation components?",
+    "choices": [
+      {
+        "value": {
+          "key": "angular-foundation",
+          "module": "mm.foundation"
+        },
+        "name": "Angular Foundation, a set of native AngularJS directives based on Foundation's markup and CSS"
+      },
+      {
+        "value": {
+          "key": "official",
+          "module": null
+        },
+        "name": "The official jQuery implementation of Foundation"
+      },
+      {
+        "value": {
+          "key": "noFoundationComponents",
+          "module": null
+        },
+        "name": "No JavaScript, just CSS"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "name": "cssPreprocessor",
+    "message": "Which CSS preprocessor do you want?",
+    "choices": [
+      {
+        "value": {
+          "key": "node-sass",
+          "extension": "scss"
+        },
+        "name": "Sass (Node), Node.js binding to libsass, the C version of the popular stylesheet preprocessor, Sass."
+      },
+      {
+        "value": {
+          "key": "ruby-sass",
+          "extension": "scss"
+        },
+        "name": "Sass (Ruby), Original Syntactically Awesome StyleSheets (requires Ruby)"
+      },
+      {
+        "value": {
+          "key": "less",
+          "extension": "less"
+        },
+        "name": "Less, extends the CSS language, adding features that allow variables, mixins, functions and many other techniques."
+      },
+      {
+        "value": {
+          "key": "stylus",
+          "extension": "styl"
+        },
+        "name": "Stylus, supporting both an indented syntax and regular CSS style."
+      },
+      {
+        "value": {
+          "key": "noCssPrepro",
+          "extension": "css"
+        },
+        "name": "None, only the good old CSS"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "name": "jsPreprocessor",
+    "message": "Which JS preprocessor do you want?",
+    "choices": [
+      {
+        "value": {
+          "key": "noJsPrepro",
+          "extension": "js",
+          "srcExtension": "js"
+        },
+        "name": "None, I like to code in standard JavaScript."
+      },
+      {
+        "value": {
+          "key": "babel",
+          "extension": "js",
+          "srcExtension": "es6"
+        },
+        "name": "ES6 (Babel formerly 6to5), ECMAScript 6 compiled with Babel which requires no runtime."
+      },
+      {
+        "value": {
+          "key": "traceur",
+          "extension": "js",
+          "srcExtension": "es6"
+        },
+        "name": "ES6 (Traceur), ECMAScript 6 compiled with the Traceur compiler from Google."
+      },
+      {
+        "value": {
+          "key": "coffee",
+          "extension": "coffee",
+          "srcExtension": "coffee"
+        },
+        "name": "CoffeeScript, \"a little language that compiles into JavaScript\"."
+      },
+      {
+        "value": {
+          "key": "typescript",
+          "extension": "ts",
+          "srcExtension": "ts"
+        },
+        "name": "TypeScript, a typed superset of JavaScript that compiles to plain JavaScript."
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "name": "htmlPreprocessor",
+    "message": "Which HTML template engine would you want?",
+    "choices": [
+      {
+        "value": {
+          "key": "noHtmlPrepro",
+          "extension": "html"
+        },
+        "name": "None, I like to code in standard HTML."
+      },
+      {
+        "value": {
+          "key": "jade",
+          "extension": "jade"
+        },
+        "name": "Jade (*.jade)"
+      },
+      {
+        "value": {
+          "key": "haml",
+          "extension": "haml"
+        },
+        "name": "Haml (*.haml)"
+      },
+      {
+        "value": {
+          "key": "handlebars",
+          "extension": "hbs"
+        },
+        "name": "Handlebars (*.hbs)"
+      }
+    ]
+  }
+]
